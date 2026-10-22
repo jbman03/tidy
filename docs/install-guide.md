@@ -9,7 +9,7 @@ looks different, their docs win.
 
 ## What you need
 
-- Your iPhone (iOS 15 or newer, with a passcode) and its USB cable
+- Your iPhone on **iOS 17 or newer** (check: Settings → General → About → iOS Version), with a passcode, and its USB cable
 - Your Windows 11 PC (64-bit)
 - Your Apple ID (free; no developer program needed)
 - Wi-Fi on the phone (refreshing doesn't work over mobile data)

@@ -30,7 +30,7 @@ public enum SignatureStatus: Equatable, Sendable {
         guard let expiration else { return .unknown }
         let secondsLeft = expiration.timeIntervalSince(now)
         if secondsLeft <= 0 { return .expired }
-        let daysLeft = Int(secondsLeft / day)
+        let daysLeft = Int((secondsLeft / day).rounded(.up))  // matches SideStore's "7 DAYS" counter
         return secondsLeft < renewSoonThreshold ? .renewSoon(daysLeft: daysLeft) : .ok(daysLeft: daysLeft)
     }
 
