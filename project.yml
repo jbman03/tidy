@@ -1,0 +1,25 @@
+name: Tidy
+options:
+  deploymentTarget:
+    iOS: "17.0"
+packages:
+  TidyCore:
+    path: TidyCore
+targets:
+  Tidy:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: TidyCore
+        product: TidyCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jbman03.tidy
+        SWIFT_VERSION: "6.0"
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Tidy
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: 1
