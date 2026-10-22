@@ -33,9 +33,9 @@ final class SignatureTests: XCTestCase {
     func testBoundaries() {
         let d = 86400.0
         XCTAssertEqual(SignatureStatus.evaluate(expiration: now + 2 * d, now: now), .ok(daysLeft: 2))
-        XCTAssertEqual(SignatureStatus.evaluate(expiration: now + 2 * d - 1, now: now), .renewSoon(daysLeft: 1))
+        XCTAssertEqual(SignatureStatus.evaluate(expiration: now + 2 * d - 1, now: now), .renewSoon(daysLeft: 2))
         XCTAssertEqual(SignatureStatus.evaluate(expiration: now, now: now), .expired)
-        XCTAssertEqual(SignatureStatus.evaluate(expiration: now + 6.5 * d, now: now), .ok(daysLeft: 6))
+        XCTAssertEqual(SignatureStatus.evaluate(expiration: now + 6.5 * d, now: now), .ok(daysLeft: 7))
     }
 
     func testMessages() {

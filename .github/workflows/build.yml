@@ -37,6 +37,7 @@ jobs:
         run: |
           unzip -l Tidy.ipa | grep -q 'Payload/Tidy.app/Info.plist'
           unzip -l Tidy.ipa | grep -q 'Payload/Tidy.app/Tidy$'
+          unzip -l Tidy.ipa | grep -q 'Payload/Tidy.app/AppIcon60x60@2x.png'
 
       - uses: actions/upload-artifact@v4
         with:
